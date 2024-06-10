@@ -9,3 +9,6 @@ function getComputerChoice() {
         return compChoice = "Scissors";
     }
 }
+function getHumanChoice() {
+    return humanChoice = prompt("Let's play Rock Paper Scissors!");
+}
