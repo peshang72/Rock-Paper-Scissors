@@ -12,10 +12,10 @@ function getComputerChoice() {
 function getHumanChoice() {
     return requestedChoice = prompt("Let's play Rock Paper Scissors!");
 }
-let humanScore = 0;
-let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+
+function playGame() {
+    function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 
     if (humanChoice === computerChoice.toLowerCase()) {
@@ -55,5 +55,20 @@ function playRound(humanChoice, computerChoice) {
     else {
         console.log("Invalid Input!");
     }
+    }
+    
+    let humanScore = 0;
+    let computerScore = 0;
 
+    
+
+    for (let i = 1; i <=5; i++) {
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(`Your Current Score: ${humanScore}`);
+        console.log(`Computer's Current Score: ${computerScore}`);
+    }
 }
+
+playGame();
